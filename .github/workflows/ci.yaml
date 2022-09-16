@@ -83,20 +83,25 @@ jobs:
         run: mamba env update -n test-environment -f continuous_integration/environment.yaml
 #        if: steps.cache.outputs.cache-hit != 'true'
 
+#      - name: Install unstable dependencies
+#        if: matrix.experimental == true
+#        shell: bash -l {0}
+#        run: |
+#          python -m pip install \
+#          --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple/ \
+#          --trusted-host pypi.anaconda.org \
+#          --no-deps --pre --upgrade \
+#          scipy
       - name: Install unstable dependencies
         if: matrix.experimental == true
         shell: bash -l {0}
         run: |
-          python -m pip install \
-          --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple/ \
-          --trusted-host pypi.anaconda.org \
-          --no-deps --pre --upgrade \
-          scipy
+          pip install scipy
 
-      - name: Install satpy
-        shell: bash -l {0}
-        run: |
-          python -m pip install --no-deps -e .
+#      - name: Install satpy
+#        shell: bash -l {0}
+#        run: |
+#          python -m pip install --no-deps -e .
 
       - name: Run unit tests
         shell: bash -l {0}

@@ -91,7 +91,7 @@ jobs:
           --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple/ \
           --trusted-host pypi.anaconda.org \
           --no-deps --pre --upgrade \
-          numpy;
+          scipy; \
           python -m pip install \
           --no-deps --upgrade \
           git+https://github.com/dask/dask \

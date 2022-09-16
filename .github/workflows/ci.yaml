@@ -92,7 +92,6 @@ jobs:
           --trusted-host pypi.anaconda.org \
           --no-deps --pre --upgrade \
           numpy \
-          pandas \
           scipy; \
           python -m pip install \
           --no-deps --upgrade \

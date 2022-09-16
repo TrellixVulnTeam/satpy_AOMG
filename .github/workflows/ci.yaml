@@ -91,10 +91,7 @@ jobs:
           --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple/ \
           --trusted-host pypi.anaconda.org \
           --no-deps --pre --upgrade \
-          scipy; \
-          python -m pip install \
-          --no-deps --upgrade \
-          git+https://github.com/mapbox/rasterio;
+          scipy
 
       - name: Install satpy
         shell: bash -l {0}

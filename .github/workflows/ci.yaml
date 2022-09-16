@@ -88,8 +88,22 @@ jobs:
         shell: bash -l {0}
         run: |
           python -m pip install \
+          --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple/ \
+          --trusted-host pypi.anaconda.org \
+          --no-deps --pre --upgrade \
+          matplotlib \
+          numpy \
+          pandas \
+          scipy; \
+          python -m pip install \
           --no-deps --upgrade \
-          git+https://github.com/mapbox/rasterio
+          git+https://github.com/dask/dask \
+          git+https://github.com/dask/distributed \
+          git+https://github.com/zarr-developers/zarr \
+          git+https://github.com/mapbox/rasterio \
+          git+https://github.com/pydata/bottleneck \
+          git+https://github.com/pydata/xarray \
+          git+https://github.com/astropy/astropy;
 
       - name: Install satpy
         shell: bash -l {0}

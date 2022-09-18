@@ -106,9 +106,9 @@ jobs:
       - name: Run unit tests
         shell: bash -l {0}
         run: |
-          python -c "import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('no xarray import')" || true
-          python -c "import xarray as xr; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('no dask import')" || true
-          python -c "import dask; import xarray as xr; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('all imports')" || true
+          python -c "import rasterio; print('no xarray import')" || true
+          python -c "import xarray as xr; import rasterio; print('no dask import')" || true
+          python -c "import dask; import dask.array as da; import xarray as xr; import rasterio; print('all imports')" || true
 #          python -c "import numpy as np; from PIL import Image; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('no xarray import')" || true
 #          python -c "import numpy as np; import xarray as xr; from PIL import Image; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('no dask import')" || true
 #          python -c "import dask; import dask.array as da; import numpy as np; import xarray as xr; from PIL import Image; from dask.delayed import delayed; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('all imports')" || true

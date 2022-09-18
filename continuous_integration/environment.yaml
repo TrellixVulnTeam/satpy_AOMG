@@ -19,7 +19,7 @@ dependencies:
 #  - bottleneck
 #  - rioxarray
   #- openssl=3.0.5=h166bdaf_2
-  - openssl=1.1.1q=h166bdaf_0
+#  - openssl=1.1.1q=h166bdaf_0
 #  - libtiff
   - pip
 #  - pip:

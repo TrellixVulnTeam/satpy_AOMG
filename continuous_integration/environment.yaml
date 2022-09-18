@@ -1,58 +1,24 @@
-name: test-environment
 channels:
   - conda-forge
 dependencies:
-  - xarray
-  - dask
-  - distributed
-  - donfig
-  - appdirs
-  - toolz
-  - Cython
-  - sphinx
-  - cartopy
-  - panel>=0.12.7
+#  - xarray
+#  - dask
+#  - distributed
+#  - donfig
+#  - appdirs
+#  - toolz
+#  - Cython
   - pillow
-  - matplotlib
+#  - matplotlib
   - scipy
-  - pyyaml
+#  - pyyaml
   - pyproj
-  - pyresample>=1.24
-  - coveralls
-  - coverage
-  - codecov
-  - behave
-  - netcdf4
-  - h5py
-  - h5netcdf
-  - gdal
+  - gdal=3.5.2=py39haa391fb_0
+  #- libgdal=3.5.2=hc23bfc3_0
   - rasterio
   - bottleneck
   - rioxarray
-  - defusedxml
-  - imageio
-  - pyhdf
-  - mock
-  - libtiff
-  - geoviews
-  - zarr
-  - python-eccodes
-  # 2.19.1 seems to cause library linking issues
-  - eccodes>=2.20
-  - geoviews
-  - pytest
-  - pytest-cov
-  - pytest-lazy-fixture
-  - fsspec
-  - s3fs
-  - pylibtiff
-  - python-geotiepoints
-  - pooch
+#  - libtiff
   - pip
-  - skyfield
-  - astropy
-  - pip:
-    - trollsift
-    - trollimage
-    - pyspectral
-    - pyorbital
+#  - pip:
+#    - trollimage

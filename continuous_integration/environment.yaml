@@ -9,9 +9,9 @@ dependencies:
 #  - toolz
 #  - Cython
   - pillow
-  - matplotlib
+#  - matplotlib
   - scipy
-  - pyyaml
+#  - pyyaml
   - pyproj
   - gdal=3.5.2=py39haa391fb_0
   #- libgdal=3.5.2=hc23bfc3_0
@@ -20,7 +20,7 @@ dependencies:
   - rioxarray
   #- openssl=3.0.5=h166bdaf_2
   - openssl=1.1.1q=h166bdaf_0
-  - libtiff
+#  - libtiff
   - pip
 #  - pip:
 #    - trollimage

@@ -108,7 +108,7 @@ jobs:
         run: |
           python -c "import rasterio; print('no xarray import')" || true
           python -c "import scipy.fftpack; import rasterio; print('fftpack imports')" || true
-          python -c "import dask.array as da; import rasterio; print('dask array no xarray imports')" || true
+#          python -c "import dask.array as da; import rasterio; print('dask array no xarray imports')" || true
 #          python -c "import xarray as xr; import rasterio; print('no dask import')" || true
 #          python -c "import dask.array as da; import xarray as xr; import rasterio; print('all imports')" || true
 #          python -c "import numpy as np; from PIL import Image; import rasterio; from rasterio.enums import Resampling; from rasterio.windows import Window; print('no xarray import')" || true

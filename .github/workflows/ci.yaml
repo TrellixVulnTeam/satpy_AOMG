@@ -107,6 +107,7 @@ jobs:
         shell: bash -l {0}
         run: |
           python -c "import rasterio; print('no xarray import')" || true
+          python -c "import scipy; print(scipy.__version__)" || true
           python -c "import scipy.fftpack; import rasterio; print('fftpack imports')" || true
 #          python -c "import dask.array as da; import rasterio; print('dask array no xarray imports')" || true
 #          python -c "import xarray as xr; import rasterio; print('no dask import')" || true
